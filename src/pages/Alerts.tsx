@@ -134,7 +134,7 @@ const formatTimeAgo = (date: Date) => {
 
 const Alerts: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedSeverity, setSelectedSeverity] = useState('all');
+  const [selectedSeverity] = useState('all');
 
   const filteredAlerts = alerts.filter(alert => {
     const matchesSearch = alert.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
